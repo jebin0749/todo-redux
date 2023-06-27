@@ -10,7 +10,7 @@ import Title from './components/TitleComponent/title';
 import UserTasks from './components/UserTasksComponent/UsersTasks'
 import React,{useState} from 'react';
 
-
+var sno=0;
 function App() {
 
   const deleteTasks=(todos)=>{
@@ -23,10 +23,11 @@ function App() {
 
   const addTodo=(title,desc)=>{
     console.log(title,desc);
-
+    sno++;
     const newTodo={
       title:title,
-      desc:desc
+      desc:desc,
+      sno:sno,
     }
     console.log(newTodo);
     setTodo([...todo,newTodo]);
