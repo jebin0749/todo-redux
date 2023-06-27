@@ -1,0 +1,35 @@
+// *{
+//   //background-color: #F7EBD8;
+//   // justify-content: center;
+//   // width:fit-content;
+// }
+
+.left-side-div
+{
+    width: 20%;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.right-side-div
+{
+    width:80%;
+    background-color: rgb(247, 235, 216);
+    height: 100vh;
+    overflow: auto;
+    .title-hello-card
+    {
+       display: flex;
+       flex-direction: row;
+       justify-content: space-between;
+       .todo-form
+       {
+          margin:0px auto;
+       }
+    }
+ 
+}
+

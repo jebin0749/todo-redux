@@ -1,0 +1,65 @@
+.tasks{
+    border-radius: 20px;
+    padding:10px;
+    margin:10px;
+    border:2px solid rgb(206, 82, 82);
+    width:250px;  
+    box-shadow: 5px 10px 10px rgb(228, 95, 95);  
+    background-color:coral; 
+    margin-right: 50px;
+    
+}
+// .tasks:hover{
+//     padding:10px;
+//     margin:10px;
+//     border:2px solid rgb(206, 82, 82);
+//     width:250px;  
+//     box-shadow: 0 0 10px rgb(228, 95, 95);  
+//     margin:30px;
+//     margin-right: 200px;
+// }
+.tasks h4{
+    word-wrap:break-word;
+    padding: 10px;
+    padding-right: 30px;
+    padding-bottom: 20px;
+    background-color:rgb(55, 88, 77);
+    border-radius: 5px;
+    font-weight: bold ;
+    color:white;
+}
+
+.tasks p
+{
+    word-wrap:break-word;
+    padding: 10px;
+    background-color:rgb(55, 88, 77);
+    border-radius: 5px;
+    font-weight: bold ;
+    color:white;
+}
+
+.tasks button
+{
+    width:60px;
+    height:40px;
+    border-radius: 10px;
+    transition: width 0.4s ease-in;
+    margin-right: 3px;
+    margin-left:5px;
+}
+
+.tasks button:hover{
+   
+    padding: 10px;
+    width:100px;
+    background-color: greenyellow;
+    border-radius: 10px;
+}
+
+.doneButton{
+    background-color: purple;
+}
+.updateButton{
+    background-color: red;
+}
