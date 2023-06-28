@@ -23,13 +23,8 @@ const HelloCard = () => {
 
   return (
     <div className={HelloCardcss.HelloCard}>
-      <div>
-        <h3>HELLO, JEBIN</h3>
-      </div>
-      <div>
         <h3><span>{dateString}</span></h3>
         <h2>{timeString}</h2>
-      </div>
     </div>
   );
 };

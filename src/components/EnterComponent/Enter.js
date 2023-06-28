@@ -1,12 +1,11 @@
 import React, { useState } from "react";
 import './Enter.scss';
-import Tasks from "../TasksComponent/Tasks";
+
 const Enter=({addTodo})=>{
 
     const [title,setTitle]=useState("");
     const [desc,setDesc]=useState("");
     const [Submitted,setSubmitted]=useState(false);
-    const [dateTime,setDateTime]=useState(null);
 
     const submit=(e)=>{
         e.preventDefault();
@@ -19,9 +18,6 @@ const Enter=({addTodo})=>{
         {
           addTodo(title,desc);
           setSubmitted(true);
-
-          const currentDateTime= new Date();
-          setDateTime(currentDateTime);
 
           setTimeout(()=>{
               setSubmitted(false);
@@ -36,7 +32,6 @@ const Enter=({addTodo})=>{
         <div className="container">
             
         {Submitted && <h3 className="h3"> Successfully Added!</h3>}
-        {/* {dateTime && <Tasks dateTime={dateTime} todo={addTodo} />} */}
 
         <h2 >Enter Task</h2>
         {(!title || !desc) && <h3 className="warning">Please enter {(!title && "title") || (!desc && "description")}</h3>}

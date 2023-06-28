@@ -2,10 +2,10 @@
     border-radius: 20px;
     padding:10px;
     margin:10px;
-    border:2px solid rgb(206, 82, 82);
+    border:2px solid #a296d6;
     width:250px;  
-    box-shadow: 5px 10px 10px rgb(228, 95, 95);  
-    background-color:coral; 
+    box-shadow: 5px 10px 10px #b6a6fe;  
+    background-color:#443C68; 
     margin-right: 50px;
     
 }
@@ -22,8 +22,19 @@
     word-wrap:break-word;
     padding: 10px;
     padding-right: 30px;
-    padding-bottom: 20px;
-    background-color:rgb(55, 88, 77);
+    margin:0px;
+    background-color:#18122B;
+    
+    font-weight: bold ;
+    color:white;
+}
+.tasks h3{
+    word-wrap:break-word;
+    padding: 10px;
+    padding-right: 30px;
+    padding-bottom: 0px;
+    padding-top: 30px;
+    background-color:#18122B;
     border-radius: 5px;
     font-weight: bold ;
     color:white;
@@ -33,7 +44,7 @@
 {
     word-wrap:break-word;
     padding: 10px;
-    background-color:rgb(55, 88, 77);
+    background-color:#18122B;
     border-radius: 5px;
     font-weight: bold ;
     color:white;
@@ -62,4 +73,10 @@
 }
 .updateButton{
     background-color: red;
+}
+
+.tasks input{
+    position:relative;
+    left:45px;
+    bottom:28px;
 }
