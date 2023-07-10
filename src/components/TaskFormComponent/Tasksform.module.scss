@@ -1,34 +1,92 @@
-.container{
-
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin:0px 2px;
-    flex-wrap:wrap;
-   
-    // position: relative;
-    // left:500px;
-    // bottom:300px;
-} 
-
+.container 
+{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0%;
+  // margin-left: 40%;
+  // bottom:85%;
+  // position: relative;
+  // left:500px;
+  // bottom:300px;
+}
 // .container{
 //     h2{
 //         // position: relative;
 //         // left:40px;
 //     }
-// } 
-.todoheading{
-    background-color:white;
-    border-radius:10px;
-    font-weight:bolder;
-    font-size:3rem;
-    width: max-content;
-    margin: 30px;
-    margin-right:200px;
+// }
+.todoheading 
+{
+  background-color: white;
+  border-radius: 10%;
+  font-weight: bolder;
+  font-size: 3rem;
+  width: max-content;
+  margin: 0%;
+  // margin-left: -59%;
+  // transform:translateY(300%);
 }
 
-.maps{
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
+.maps 
+{
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  // margin-top:-50%;
+  // width:150%;
+  // margin-left:-40%;
+  margin: 0 auto;
+  // transform: translateX(-30%);
+//   border: 2px solid;
+  max-height: 501px;
+  overflow: auto;
+}
+
+@media only screen and (min-width: 768px)
+{
+  .container
+  {
+    // position: relative;
+    // bottom:-30%;
+  }
+  .maps 
+  {
+    // margin-top:-50%;
+    // width:150%;
+    // margin-left:-40%;
+    margin: 0 auto;
+    // transform: translateX(-30%);
+    // transform: translateY(-10%);
+    // border: 2px solid;
+    height: 501px;
+    overflow: auto;
+  }
+}
+
+@media only screen and (min-width: 1000px) 
+{
+  .todoheading {
+    margin: 0%;
+    // margin-left: -75%;
+  }
+  .container
+  {
+    // position: relative;
+    // bottom:30%;
+  }
+  .maps 
+  {
+    // margin-top:-50%;
+    // width:150%;
+    // margin-left:-40%;
+    margin: 0 auto;
+    // transform: translateX(-40%);
+    // transform: translateY(-10%);
+    // border: 2px solid;
+    height: 501px;
+    overflow: auto;
+  }
 }

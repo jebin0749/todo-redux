@@ -8,7 +8,7 @@ const Profile =({name,username,pic})=>{
                 <img src={pic} alt='profile pic'/>
             </div>
             <div className={UserProfilecss.profileInfo}>
-                <h2 style={{backgroundColor:'#D9D9D9'}}>{name}</h2>
+                {/* <h3 style={{backgroundColor:'#D9D9D9'}}>{name}</h3> */}
                 <h4 style={{backgroundColor:'#D9D9D9'}}>{username}</h4>
             </div>
         </div>

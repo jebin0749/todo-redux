@@ -1,13 +1,34 @@
-.HelloCard{
-    padding:10px;
+.HelloCard
+{
+    // padding:10px;
     border: 2px solid black;
-    box-shadow:0 0 10px #2196F3;
+    box-shadow:1px 0 2px #c3c9ce;
     width:150px;
     height: 150px;
-    align-items: center;
-    display: flex;
-    flex-direction: column;
+    // align-items: center;
+    // display: flex;
+    // flex-direction: column;
+    // margin-left: 65%;
+    color:white;
+    // transform: translateY(-700px);
+    display: none;
     // position: relative;
     // left:1050px;
     // bottom:200px;
+}
+
+@media only screen and (min-width:768px)
+{
+    .HelloCard
+    {
+        display: block;
+    }
+}
+
+@media only screen and (min-width:1000px)
+{
+    .HelloCard
+    {
+        display: block;
+    }
 }

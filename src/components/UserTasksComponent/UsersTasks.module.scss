@@ -1,10 +1,61 @@
-.userTasks{
-    display: flex;
+.userTasks
+{
     justify-content: center;
     align-items: center;
     width: 15vw;
     height: 50vh;
     flex-shrink: 0;
-    background: #D7ECEF;
+    background: #393053;
+    color: white;
     border-radius: 20px;
+    // margin-left: 225px;
+    // transform: translateY(-125px);
+    display: none;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+}
+
+.title
+{
+    text-align: center;
+    display: block;
+    background-color: wheat;
+    color: black;
+    text-align: -webkit-left;
+}
+
+h3
+{
+    text-align: center;
+}
+.done{
+    display: flex;
+    border: 2px solid;
+    margin-left: 70px;
+    text-decoration: none;
+    line-height: 1.7em;
+    padding: 2px;
+    border-radius: 5px;
+    font-weight: 800;
+    justify-content: space-around;
+}
+@media only screen and (min-width:768px)
+{
+    .userTasks
+    {
+        margin-left: 2%;
+        display:block;
+        height:fit-content;
+    }    
+}
+
+@media only screen and (min-width:1000px)
+{
+    .userTasks
+    {
+        margin-left: 13%;
+        display:block;
+        // position: relative;
+        // bottom:35%;
+        // height:fit-content;
+    } 
 }
