@@ -1,27 +1,33 @@
-import React, { useState } from 'react';
-import UserTaskscss from './UsersTasks.module.scss';
+import React, { useEffect } from "react";
+import UserTaskscss from "./UsersTasks.module.scss";
+import { useSelector, useDispatch, shallowEqual } from "react-redux";
+import { resetTaskState } from "../../state/actions/tasks";
 
-const UserTasks = (props) => {
-    const [sno,setSno]=useState(0);
-    const [isStriked, setIsStriked] = useState(false);
-
-    const handleButtonClick = () => {
-      setIsStriked(!isStriked);
+const UserTasks = () => {
+  const tasks = useSelector((state) => state.addTodo, shallowEqual);
+  const dispatch = useDispatch();
+  useEffect(() => {
+    // Clean up and reset task state when component unmounts
+    return () => {
+      dispatch(resetTaskState());
     };
+  }, []);
 
-    const getTextStyles = () => {
-      return isStriked ? { textDecoration: 'line-through', textDecorationThickness: '4px' } : {};
-    };
-
-    const text = () => {
-      return isStriked ? 'Undo' : 'Done';
-    };
+  const getTextStyles = (isDone) => {
+    return isDone
+      ? { textDecoration: "line-through", textDecorationThickness: "4px" }
+      : {};
+  };
 
   return (
-    <div className={UserTaskscss.userTasks}>
-        <h3>TASKS</h3>
-      {props.todo.map((todo) => (
-        <div key={todo.sno} className={UserTaskscss.title}><span>{todo.sno}) </span><span style={getTextStyles()}>{todo.title}</span><a onClick={handleButtonClick} className={UserTaskscss.done} href="#">{text()}</a></div>
+    <div className={UserTaskscss?.userTasks}>
+      <h3>TASKS</h3>
+
+      {tasks?.todo?.map((task) => (
+        <div key={task.id} className={UserTaskscss?.title}>
+          <span>{task.id}) </span>
+          <span style={getTextStyles(task.isDone)}>{task.title}</span>
+        </div>
       ))}
     </div>
   );

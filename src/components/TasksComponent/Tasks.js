@@ -1,16 +1,21 @@
 import React, { useState, useEffect } from "react";
 import Taskscss from "./Tasks.module.scss";
-import { deleteTask } from "../../state/actions/tasks";
-import { updateTask } from "../../state/actions/tasks";
+import {
+  deleteTask,
+  resetTaskState,
+  updateTask,
+} from "../../state/actions/tasks";
 import { useSelector, useDispatch, shallowEqual } from "react-redux";
 
 const Tasks = ({ task }) => {
   const dispatch = useDispatch();
-  const [isStriked, setIsStriked] = useState(false);
+  const [isStriked, setIsStriked] = useState(task.isDone);
   const [updatingTitle, setUpdatingTitle] = useState(false);
   const [updatedTitle, setUpdatedTitle] = useState(task.title);
   const [updatedDesc, setUpdatedDesc] = useState(task.desc);
   const [nowDateTime, setNowDateTime] = useState("");
+  const tasks = useSelector((state) => state.addTodo, shallowEqual);
+  console.log("task from props", task);
 
   useEffect(() => {
     const currentDateTime = new Date();
@@ -18,9 +23,19 @@ const Tasks = ({ task }) => {
   }, []);
 
   const handleButtonClick = () => {
-    setIsStriked(!isStriked);
-    
+    // const isDone = !task.isDone;
+    dispatch(updateTask(updatedTitle, updatedDesc, !isStriked, task.id));
   };
+
+  useEffect(() => {
+    console.log(tasks.updated, "");
+    if (tasks.updated) {
+      setIsStriked(task.isDone);
+    }
+    return () => {
+      dispatch(resetTaskState());
+    };
+  }, [tasks]);
 
   const handleUpdateClick = () => {
     setUpdatingTitle(true);
@@ -28,18 +43,15 @@ const Tasks = ({ task }) => {
 
   const handleTitleInputChange = (e) => {
     setUpdatedTitle(e.target.value);
-    
   };
 
   const handleDescInputChange = (e) => {
     setUpdatedDesc(e.target.value);
-    
   };
 
   const handleUpdate = () => {
-    task.desc=updatedDesc;
-    task.title=updatedTitle;
-    // dispatch(updateTask(updatedTitle,updatedDesc));
+    
+    dispatch(updateTask(updatedTitle, updatedDesc, false, task.id));
     setUpdatingTitle(false);
   };
 
@@ -50,7 +62,7 @@ const Tasks = ({ task }) => {
   };
 
   const text = () => {
-    return isStriked ? "Undo" : "Done";
+    return isStriked ? "UNDO" : "DONE";
   };
 
   return (
@@ -90,7 +102,7 @@ const Tasks = ({ task }) => {
       <br />
 
       <button type="button" onClick={() => dispatch(deleteTask(task.id))}>
-        delete
+        DELETE
       </button>
       {updatingTitle ? (
         <button
@@ -98,7 +110,7 @@ const Tasks = ({ task }) => {
           className={Taskscss.updateButton}
           onClick={handleUpdate}
         >
-          Submit
+          SUBMIT
         </button>
       ) : (
         <button
@@ -106,7 +118,7 @@ const Tasks = ({ task }) => {
           className={Taskscss.updateButton}
           onClick={handleUpdateClick}
         >
-          Update
+          UPDATE
         </button>
       )}
       <button

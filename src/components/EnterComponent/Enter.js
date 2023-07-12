@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { submitForm } from "../../state/actions/submit";
+
 import { addTodo } from "../../state/actions/addtodo";
 import "./Enter.scss";
 

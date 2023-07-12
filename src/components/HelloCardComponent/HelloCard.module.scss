@@ -1,20 +1,13 @@
 .HelloCard
 {
-    // padding:10px;
     border: 2px solid black;
+    border-radius: 10px;
     box-shadow:1px 0 2px #c3c9ce;
     width:150px;
     height: 150px;
-    // align-items: center;
-    // display: flex;
-    // flex-direction: column;
-    // margin-left: 65%;
-    color:white;
-    // transform: translateY(-700px);
+    color:rgb(0, 0, 0);
     display: none;
-    // position: relative;
-    // left:1050px;
-    // bottom:200px;
+    background-color:cornsilk;
 }
 
 @media only screen and (min-width:768px)

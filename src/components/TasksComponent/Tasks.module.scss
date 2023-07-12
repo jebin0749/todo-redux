@@ -1,70 +1,60 @@
-.tasks{
-    border-radius: 20px;
-    padding:10px;
-    margin:10px;
-    border:2px solid #a296d6;
-    width:250px;  
-    // box-shadow: 5px 10px 10px #b6a6fe;  
-    background-color:#443C68; 
-    // margin-right: 50px;
-    font-family:Georgia, 'Times New Roman', Times, serif;
-}
-// .tasks:hover{
-//     padding:10px;
-//     margin:10px;
-//     border:2px solid rgb(206, 82, 82);
-//     width:250px;  
-//     box-shadow: 0 0 10px rgb(228, 95, 95);  
-//     margin:30px;
-//     margin-right: 200px;
-// }
-.tasks h4
-{
-    word-wrap:break-word;
-    padding: 10px;
-    padding-right: 30px;
-    margin:0px;
-    background-color:#18122B;
-    font-weight: bold ;
-    color:white;
-}
-.tasks h3
-{
-    word-wrap:break-word;
-    padding: 0px;
-    padding-right: 0px;
-    padding-bottom: 0px;
-    padding-top: 30px;
-    background-color:#18122B;
-    border-radius: 5px;
-    font-weight: bold ;
-    color:rgb(255, 255, 255);
-     input
-     {
-        margin:5px;
-     }
+.tasks {
+  border-radius: 20px;
+  padding: 10px;
+  margin: 10px;
+  border: 2px solid #a296d6;
+  width: 250px;
+  // box-shadow: 5px 10px 10px #b6a6fe;
+  background-color: #443c68;
+  // margin-right: 50px;
+  font-family: Georgia, "Times New Roman", Times, serif;
 }
 
-.tasks p
-{
-    word-wrap:break-word;
-    padding: 10px;
-    background-color:#18122B;
-    border-radius: 5px;
-    font-weight: bold ;
-    color:white;
+.tasks h4 {
+  word-wrap: break-word;
+  padding: 10px;
+  padding-right: 30px;
+  margin: 0px;
+  background-color: #18122b;
+  font-weight: bold;
+  color: white;
+}
+.tasks h3 {
+  word-wrap: break-word;
+  padding: 0px;
+  padding-right: 0px;
+  padding-bottom: 0px;
+  padding-top: 30px;
+  background-color: #18122b;
+  border-radius: 5px;
+  font-weight: bold;
+  color: rgb(255, 255, 255);
+  input {
+    margin: 5px;
+  }
 }
 
-.tasks button
-{
-    justify-content: center;
-    align-items: center;
-    width:60px;
-    height:40px;
-    border-radius: 10px;
-    margin-right: 3px;
-    margin-left:15px;
-    // transition: width 0.4s ease-in;
+.tasks p {
+  word-wrap: break-word;
+  padding: 10px;
+  background-color: #18122b;
+  border-radius: 5px;
+  font-weight: bold;
+  color: white;
+}
+
+.tasks button {
+  justify-content: center;
+  align-items: center;
+  width: 60px;
+  height: 40px;
+  border-radius: 10px;
+  margin-right: 3px;
+  margin-left: 15px;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size:x-small;
+  font-weight: bold;
+  // transition: width 0.4s ease-in;
 }
 
 // .tasks button:hover{
@@ -74,28 +64,23 @@
 //     border-radius: 10px;
 // }
 
-.doneButton
-{
-    background-color: purple;
+.doneButton {
+  background-color: purple;
+  font-family: Georgia, "Times New Roman", Times, serif;
 }
-.updateButton
-{
-    background-color: red;
-}
-
-.tasks input
-{
-    position:relative;
-    left:45px;
-    bottom:28px;
+.updateButton {
+  background-color: red;
+  font-family: Georgia, "Times New Roman", Times, serif;
 }
 
-@media only screen and (min-width:768px)
-{
-    
+.tasks input {
+  position: relative;
+  left: 45px;
+  bottom: 28px;
 }
 
-@media only screen and (min-width:1000px)
-{
-    
+@media only screen and (min-width: 768px) {
+}
+
+@media only screen and (min-width: 1000px) {
 }
