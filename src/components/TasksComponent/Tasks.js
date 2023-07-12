@@ -23,7 +23,6 @@ const Tasks = ({ task }) => {
   }, []);
 
   const handleButtonClick = () => {
-    // const isDone = !task.isDone;
     dispatch(updateTask(updatedTitle, updatedDesc, !isStriked, task.id));
   };
 
@@ -50,7 +49,6 @@ const Tasks = ({ task }) => {
   };
 
   const handleUpdate = () => {
-    
     dispatch(updateTask(updatedTitle, updatedDesc, false, task.id));
     setUpdatingTitle(false);
   };

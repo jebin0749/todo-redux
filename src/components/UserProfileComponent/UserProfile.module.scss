@@ -6,14 +6,6 @@
   padding: 5px;
   border-radius: 40%;
   width: fit-content;
-  // margin-left:80%;
-
-  // margin-left:80%;
-  // margin-bottom:0%;
-  // transform: translateY(-280%);
-  /* height: 150px;
-    position: relative; 
-    top:10px;*/
 }
 .pic {
   width: 50px;
@@ -35,7 +27,6 @@ h4 {
 
 @media only screen and (min-width: 768px) {
   .profile {
-    //transform:translateY(-210%);
     display: flex;
     flex-direction: column;
     border-radius: 10%;
@@ -53,8 +44,6 @@ h4 {
 
 @media only screen and (min-width: 1000px) {
   .profile {
-    // transform: translateY(-480%);
-    // margin-left:60%;
     display: flex;
     flex-direction: column;
     border-radius: 10%;
