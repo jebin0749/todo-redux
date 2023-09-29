@@ -15,7 +15,7 @@ const addTodo = (state = initialState, action) => {
   switch (action.type) {
     case ADD_TODO:
       const { title, desc, isDone} = action.payload;
-
+      
       const newTodo = {
         title,
         desc,
